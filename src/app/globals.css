@@ -2,12 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
+@layer base {
+  h1 {
+    @apply uppercase text-2xl font-extrabold p-2 text-center font-serif text-deepGreen;
+    text-shadow:
+      -1.5px -1.5px 0 #000,  
+      1.5px -1.5px 0 #000,
+      -1.5px 1.5px 0 #000,
+      1.3px 1.3px 0 #000;
+  }
+  h2 {
+    @apply font-medium font-mono;
+  }
+  h3 {
+    @apply font-semibold bg-red-400 text-lg font-sans; 
+  }
+  p {
+    @apply font-sans text-lg leading-6 my-2; 
+  }
+  html {
+    @apply text-[#0b1734];
+  }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.leaflet-container {
+  @apply w-full h-96 -z-0 border-2 border-darkBlue rounded-lg;
+}
+
+.vertical {
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
 }
