@@ -1,101 +1,68 @@
+"use client";
 import Image from "next/image";
+import { motion, useViewportScroll, useTransform } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const { scrollY } = useViewportScroll();
+  const [scrollDistance, setScrollDistance] = useState(0);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+  useEffect(() => {
+    setScrollDistance(window.innerHeight * 2);
+    const handleResize = () => setScrollDistance(window.innerHeight * 2);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const y1 = useTransform(scrollY, [0, scrollDistance], [0, 100]);
+  const y2 = useTransform(scrollY, [0, scrollDistance], [0, 200]);
+  const y3 = useTransform(scrollY, [0, scrollDistance], [0, 300]);
+
+  const animationProps = {
+    initial: { opacity: 0, scale: 0.5 },
+    animate: { opacity: 1, scale: 1 },
+    exit: { opacity: 0, scale: 0.5 },
+    transition: { duration: 0.8, ease: "easeInOut" },
+  };
+
+  const logoY = useTransform(scrollY, [scrollDistance, scrollDistance], [0, -scrollDistance]);
+
+  return (
+    <>
+      <div className="w-screen h-[200vh] relative overflow-hidden">
+        <motion.div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-0">
+          <motion.div style={{ y: logoY }}>
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/images/logo.png"
+              alt="logo"
+              layout="intrinsic"
+              width={500}
+              height={500}
+              className="object-contain w-40 h-40 md:w-80 md:h-80 lg:w-96 lg:h-96"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          </motion.div>
+        </motion.div>
+
+        <motion.div className="w-full h-full absolute top-0 left-0 z-10" style={{ y: y1 }}>
+          <motion.div className="absolute bg-green-500 -left-2 top-24 w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 lg:w-80 lg:h-80" {...animationProps} />
+          <motion.div className="absolute bg-blue-500 top-5 right-5 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-60 lg:h-60" {...animationProps} />
+        </motion.div>
+
+        <motion.div className="w-full h-full absolute top-0 left-0 z-20" style={{ y: y2 }}>
+          <motion.div className="absolute bg-red-500 top-1/4 right-0 w-44 h-44 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-72 lg:h-72" {...animationProps} />
+          <motion.div className="absolute bg-pink-500 top-0 left-0 w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64" {...animationProps} />
+          <motion.div className="absolute bg-yellow-500 bottom-5 left-5 w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80" {...animationProps} />
+        </motion.div>
+
+        <motion.div className="w-full h-full absolute top-0 left-0 z-30" style={{ y: y3 }}>
+          <motion.div className="absolute bg-purple-500 border-black border-8 top-48 left-12 w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80" {...animationProps} />
+          <motion.div className="absolute bg-black border-8 border-black bottom-1/3 left-1/4 w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96" {...animationProps} />
+          <motion.div className="absolute bg-pink-500 bottom-0 right-0 w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80" {...animationProps} />
+        </motion.div>
+      </div>
+
+      <div className="h-screen w-screen bg-red-500"></div>
+      <div className="h-screen w-screen"></div> 
+    </>
   );
 }
