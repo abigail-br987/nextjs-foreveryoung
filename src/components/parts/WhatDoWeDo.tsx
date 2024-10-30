@@ -47,7 +47,8 @@ const InfoCard: React.FC<InfoCardProps> = ({
     <div
       className={`p-5 relative rounded-lg border-2 border-darkBlue bg-white flex flex-col ${className}`}
     >
-      <div className="absolute -top-5 -left-5 flex items-center justify-center bg-white text-3xl border-2 p-1 aspect-square border-darkBlue w-min rounded-full">
+      <div className="absolute -top-3 -left-3 flex
+       items-center justify-center bg-white text-2xl border-2 aspect-square border-darkBlue rounded-full">
         {emoji}
       </div>
       <h2>{title}</h2>
@@ -58,34 +59,45 @@ const InfoCard: React.FC<InfoCardProps> = ({
 
 function WhatDoWeDo() {
   return (
-    <div className="my-16">
+    <div className="space-y-4">
       <h1>¿Qué hacemos?</h1>
-      <p className="text-center">
+      <p className="text-center bg-white leading-4 w-fit p-1 px-3 rounded-lg pt-1.5 m-auto border-2 border-darkBlue">
         Nuestro objetivo es apoyar a los adolescentes y promover su salud
         sexual, integral, mental y física.
       </p>
-      <div className="grid grid-cols-4 w-full max-w-full gap-2 bg-darkBlue rounded-lg">
+      <p className="text-justify">
+              Esta experiencia se desarrolla en el marco de los derechos que
+              tienen los jóvenes a la <strong>SALUD, EDUCACIÓN Y PARTICIPACIÓN</strong> , con un
+              enfoque de equidad, de derecho y diversidad. Trabajamos con los
+              profesionales del equipo multidisciplinario en actividades
+              preventivas de conductas de riesgo y de promoción de estilos de
+              vida saludables con sus pares. Sistema organizado de adolescentes,
+              que trabajan voluntariamente en el desarrollo de actividades
+              dirigidos a adolescentes. Cada adolescente al formar parte de
+              ForeverYoung, contribuye al desarrollo del servicio
+            </p>
+      <div className="sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-rows-4 w-full max-w-full gap-2 bg-darkBlue rounded-lg">
         {/*TALLERES */}
 
         <InfoCard
           emoji="🌟"
           title="Talleres y Charlas Interactivas"
           content="En la sala de espera, se ofrecen talleres y charlas dinámicas que informan e inspiran a los jóvenes sobre su salud y bienestar."
-          className="col-span-1"
+          className="row-start-1"
         />
 
         <HoverImageCard
-          className="col-span-1"
+          className="max-sm:hidden row-start-1"
           link="https://www.instagram.com/p/DBCgx7bB-cB/?img_index=1"
           backgroundImage="/images/taller1.PNG"
         />
         <HoverImageCard
-          className="col-span-1"
+          className=" max-md:hidden row-start-1"
           link="https://www.instagram.com/p/C-GiFPOBM8c/?img_index=3"
           backgroundImage="/images/taller2.PNG"
         />
         <HoverImageCard
-          className="col-span-1"
+          className="max-lg:hidden row-start-1"
           link="https://www.instagram.com/p/DBCdcXvhJff/?img_index=1"
           backgroundImage="/images/taller3.PNG"
         />
@@ -93,7 +105,7 @@ function WhatDoWeDo() {
         {/*CONCIENTIZACION */}
 
         <HoverImageCard
-          className="col-span-1"
+          className="max-sm:hidden row-start-2"
           link="https://www.instagram.com/forever_young_voluntariado/"
           backgroundImage="/images/screenshot2.png"
         />
@@ -102,11 +114,11 @@ function WhatDoWeDo() {
           emoji="📱"
           title="Concientización en Redes Sociales"
           content="Se realizan campañas de concientización en días especiales, promoviendo mensajes de salud y bienestar para los adolescentes."
-          className="col-span-1"
+          className="row-start-2"
         />
 
         <HoverImageCard
-          className="col-span-2"
+          className=" max-md:hidden lg:col-span-2 row-start-2"
           link="https://www.instagram.com/forever_young_voluntariado/"
           backgroundImage="/images/screenshot1.png"
         />
@@ -114,7 +126,7 @@ function WhatDoWeDo() {
         {/*PROYECTOS */}
 
         <HoverImageCard
-          className="col-span-2"
+          className="max-sm:hidden md:col-span-2 sm:col-start-2 row-start-3 "
           link="https://www.instagram.com/p/C98hzqzNGyy/?img_index=1"
           backgroundImage="/images/proyectos1.PNG"
         />
@@ -123,11 +135,11 @@ function WhatDoWeDo() {
           emoji="🚀"
           title="Proyectos Creativos"
           content="Se desarrollan proyectos nuevos que incluyen concursos y grupos, fomentando la creatividad y el compromiso en la comunidad."
-          className="col-span-1"
+          className="sm:col-start-1 md:col-start-3 row-start-3"
         />
 
         <HoverImageCard
-          className="col-span-1"
+          className="max-lg:hidden sm:col-span-1"
           link="https://www.instagram.com/p/DAOf6iBx2Sf/?img_index=1"
           backgroundImage="/images/proyectos2.PNG"
         />
@@ -135,17 +147,17 @@ function WhatDoWeDo() {
         {/*AFICHES */}
 
         <HoverImageCard
-          className="col-span-1"
+          className="max-md:hidden sm:col-start-2 md:col-start-1 row-start-4 lg:col-start-1"
           link="https://www.instagram.com/stories/highlights/17842835370287172/"
           backgroundImage="/images/afiche3.jfif"
         />
-        <HoverImageCard
-          className="col-span-1"
+       <HoverImageCard
+          className="max-sm:hidden  md-col-start-3 md:row-start-4 lg:col-start-2"
           link="https://www.instagram.com/stories/highlights/17842835370287172/"
           backgroundImage="/images/afiche2.jfif"
-        />
+        /> 
         <HoverImageCard
-          className="col-span-1"
+          className="md:col-start-2 max-md:hidden lg:col-start-3"
           link="https://www.instagram.com/stories/highlights/17842835370287172/"
           backgroundImage="/images/afiche1.jfif"
         />
@@ -154,7 +166,7 @@ function WhatDoWeDo() {
           emoji="📰"
           title="Afiches y Difusión"
           content="Se crea y distribuye información importante mediante afiches en las paredes del hospital y en las redes sociales, asegurando mayor impacto."
-          className="col-span-1"
+          className="md:col-start-2 md:row-start-4 lg:col-start-4"
         />
       </div>
     </div>
