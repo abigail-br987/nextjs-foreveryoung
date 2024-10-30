@@ -11,6 +11,8 @@ export function AnimatedLanding() {
     const yTransform2 = useTransform(scrollY, [0, 1300], [0, 650]);
     const yTransform3 = useTransform(scrollY, [0, 1300], [0, 350]);
     const yTransform4 = useTransform(scrollY, [0, 1300], [0, 550]);
+    const yTransform5 = useTransform(scrollY, [0, 600, 1300], [0, -10, -150]);
+
     const scaleTransform = useTransform(scrollY, [0, 1500], [1, 0.9]); 
   
     const animationProps = {
@@ -153,9 +155,17 @@ export function AnimatedLanding() {
             /> 
 
 <StarIcon className="absolute text-darkBlue left-[29%] top-[6%]" />
+<StarIcon className="absolute text-deepGreen bottom-[30%] left-[30%] " />
+<StarIcon className="absolute text-darkBlue bottom-[15%] right-[46%]" />
 
           </motion.div>
+
+        
         </div>
+        <motion.div className="bg-darkBlue h-screen w-full z-30 -translate-y-10"         style={{
+            y: yTransform5,
+          }} >
+            </motion.div>
       </div>
 
     )
