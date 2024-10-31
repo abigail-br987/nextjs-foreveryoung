@@ -2,14 +2,8 @@
 import WhatDoWeDo from "@/components/parts/WhatDoWeDo";
 import WhoAreWe from "@/components/parts/WhoAreWe";
 import JoinUs from "@/components/parts/JoinUs";
-import FollowUs from "@/components/parts/FollowUs";
 import { AnimatedLanding } from "@/components/sections/AnimatedLanding";
-import Footer from "@/components/sections/Footer";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import AnimatedDiv from "@/components/minicomponents/AnimatedDiv";
-import { useViewportScroll, useTransform } from "framer-motion";
-import { StarIcon } from "@/components/figures/StarIcon";
 
 export default function Home() {
   return (
@@ -42,7 +36,6 @@ export default function Home() {
           </div>
         </AnimatedDiv>
 
-        <Footer />
       </div>
     </>
   );
