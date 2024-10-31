@@ -15,11 +15,11 @@ const joinus = [
 
 function JoinUs() {
   return (
-    <div className="my-7">
-      <h1 className="mb-2">Únete a ForeverYoung</h1>
-      <div className="flex flex-wrap justify-center">
+    <div className="space-y-4">
+      <h1 className="mb-2 ">Únete a ForeverYoung</h1>
+      <div className="grid md:grid-cols-2 gap-2 justify-center">
         {joinus.map((item, index) => (
-          <div key={index} className="w-full sm:w-1/2 p-4 rounded-lg">
+          <div key={index} className="rounded-lg">
             <div className="w-full h-96 border-2 border-darkBlue rounded-lg">
               <img
                 src={item.image}
