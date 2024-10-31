@@ -9,7 +9,7 @@ interface AnimatedDivProps {
 
 const AnimatedDiv = ({ children, className = "" }: AnimatedDivProps) => {
   const ref = useRef<HTMLDivElement | null>(null);
-  const isInView = useInView(ref, { once: false, margin: "-5% 0px" });
+  const isInView = useInView(ref, { once: false, margin: "-40% 0px" });
 
   return (
     <motion.div
@@ -21,8 +21,6 @@ const AnimatedDiv = ({ children, className = "" }: AnimatedDivProps) => {
       transition={{ 
         duration: 0.5,
         type: "spring",
-        stiffness: 300,
-        damping: 20,
       }}
       className={className}
     >
