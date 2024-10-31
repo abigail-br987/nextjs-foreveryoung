@@ -5,25 +5,25 @@ const participants = [
     name: "Lic. Katty Rojas",
     title: "Supervisora",
     description: "",
-    imageSrc: "/images/participantes-14.png",
+    imageSrc: "/images/lickatty.enc",
   },
   {
     name: "Abigail Briones",
     title: "Presidenta",
-    description: "Hola! IG: @abigail_br987",
-    imageSrc: "/images/participantes-01.png",
+    description: "",
+    imageSrc: "/images/abigailbriones.jpg",
   },
   {
     name: "Leonardo",
     title: "Tesorero",
     description: "",
-    imageSrc: "/images/participantes-09.png",
+    imageSrc: "/images/leonardo.jfif",
   },
   {
     name: "Fabrizio",
     title: "Secretario",
     description: "",
-    imageSrc: "/images/participantes-03.png",
+    imageSrc: "/images/fabrizio.jpeg",
   },
   {
     name: "Camilo",
@@ -35,19 +35,19 @@ const participants = [
     name: "Camila",
     title: "Secretaria",
     description: "",
-    imageSrc: "/images/participantes-05.png",
+    imageSrc: "/images/camila.jpeg",
   },
   {
     name: "María Gonzales",
     title: "Eventos",
     description: "",
-    imageSrc: "/images/participantes-06.png",
+    imageSrc: "/images/maria.jpeg",
   },
   {
     name: "Belén Euribe",
     title: "Eventos",
     description: "",
-    imageSrc: "/images/participantes-07.png",
+    imageSrc: "/images/belen.jpg",
   },
   {
     name: "Mishell Veramendi",
@@ -55,25 +55,38 @@ const participants = [
     description: "",
     imageSrc: "/images/participantes-02.png",
   },
+  {
+    name: "Ruby",
+    title: "Miembro",
+    description: "",
+    imageSrc: "/images/participantes-11.png",
+  },
+  {
+    name: "Ana Lucía",
+    title: "Miembro",
+    description: "",
+    imageSrc: "/images/.png",
+  },
 ];
 
 function WhoAreWe() {
   return (
-    <div className="my-7 max-sm:block md:flex md:flex-row max-sm:flex-col max-sm:items-center">
-      <h1 className="md:w-auto md:[writing-mode:vertical-lr] md:rotate-180 text-3xl font-bold md:mr-4 max-sm:mb-4">
-        ¿QUIÉNES SOMOS?
-      </h1>
+    <div className="space-y-4">
+      <h1>¿QUIÉNES SOMOS?</h1>
 
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 w-full">
-        {participants.map((participant, index) => (
-          <PersonCard
-            key={index}
-            name={participant.name}
-            title={participant.title}
-            description={participant.description}
-            imageSrc={participant.imageSrc}
-          />
-        ))}
+      <div className="grid grid-cols-4 md:lg-grid-cols-5 lg:grid-cols-6 gap-2 w-full">
+        {participants.map((participant, index) => {
+          return (
+            <div key={index}>
+              <PersonCard
+                name={participant.name}
+                title={participant.title}
+                description={participant.description}
+                imageSrc={participant.imageSrc}
+              />
+            </div>
+          );
+        })}
       </div>
     </div>
   );
