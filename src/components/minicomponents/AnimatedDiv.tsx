@@ -14,9 +14,10 @@ const AnimatedDiv = ({ children, className = "" }: AnimatedDivProps) => {
   return (
     <motion.div
       ref={ref}
-      initial={{ scale: 0.97 }}
+      initial={{ scale: 0.97, opacity:0.9 }}
       animate={{ 
         scale: isInView ? 1 : 0.97, 
+        opacity: isInView? 1: 0.9,
       }}
       transition={{ 
         duration: 0.5,
