@@ -17,10 +17,10 @@ function JoinUs() {
   return (
     <div className="my-7">
       <h1 className="mb-2">Únete a ForeverYoung</h1>
-      <div className="flex flex-wrap justify-center border-2 border-dark_blue rounded-lg bg-white">
+      <div className="flex flex-wrap justify-center">
         {joinus.map((item, index) => (
           <div key={index} className="w-full sm:w-1/2 p-4 rounded-lg">
-            <div className="w-full h-96 border-2 border-dark_blue rounded-lg">
+            <div className="w-full h-96 border-2 border-darkBlue rounded-lg">
               <img
                 src={item.image}
                 alt={`Image for ${item.title}`}
