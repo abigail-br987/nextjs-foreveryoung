@@ -5,50 +5,51 @@ import JoinUs from "@/components/parts/JoinUs";
 import FollowUs from "@/components/parts/FollowUs";
 import { AnimatedLanding } from "@/components/sections/AnimatedLanding";
 import Footer from "@/components/sections/Footer";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import AnimatedDiv from "@/components/minicomponents/AnimatedDiv";
+// Define animations for entrance and exit
+
+
 export default function Home() {
+
+
   return (
     <>
-    
       <AnimatedLanding />
-      <section className="bg-deepGreen border-2 border-black z-40">
+
+      <div className="bg-darkBlue"> 
+      <AnimatedDiv
+        className="bg-deepGreen border-2 border-black z-40"
+      >
         <div className="max-w-screen-2xl p-8 m-auto space-y-16">
           <div className="text-center">
-            <p className="text-2xl">
+            <p className="text-2xl"> 
               Somos la <strong>organización de voluntariado</strong> del Servicio de Medicina del
               Adolescente del Hospital del Niño de Breña, Lima, Perú.
             </p>
           </div>
           <WhatDoWeDo />
-
         </div>
-      </section>
+      </AnimatedDiv>
 
-      <section className="bg-white border-2 border-t-0 border-black z-40">
-      <div className="max-w-screen-2xl p-8 m-auto space-y-16">
+      <AnimatedDiv
+        className="bg-white border-2 border-black z-40"
+      >
+        <div className="max-w-screen-2xl p-8 m-auto space-y-16">
+          <WhoAreWe />
+        </div>
+      </AnimatedDiv>
 
-         <WhoAreWe />{/* 
+      <AnimatedDiv
+        className="bg-deepOrange border-2 border-black z-40"
+      >
+        <div className="max-w-screen-2xl p-8 m-auto space-y-16">
           <JoinUs />
-          <FollowUs />*/} 
-      </div>
+        </div>
+      </AnimatedDiv>
 
-      </section>
-
-      <section className="bg-deepOrange border-2 border-t-0 border-black z-40">
-      <div className="max-w-screen-2xl p-8 m-auto space-y-16">
-          <JoinUs />
-      </div>
-
-      </section>
-
-      <section className="bg-white border-2 border-t-0 border-black z-40">
-      <div className="max-w-screen-2xl p-8 m-auto space-y-16">
-          <FollowUs />
-      </div>
-
-      <Footer/>
-
-      </section>
-    
-    </>
+      <Footer />
+      </div></>
   );
 }
