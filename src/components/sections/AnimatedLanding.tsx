@@ -24,7 +24,7 @@ export function AnimatedLanding() {
 
   return (
     <> 
-    <div className="w-full h-[150vh] relative overflow-hidden">
+    <div className="w-full h-[150vh] relative overflow-hidden -z-20 bg-white">
       <motion.div
         className="fixed top-0 left-0 w-full h-full  flex items-center justify-center -z-10"
         style={{
@@ -32,9 +32,9 @@ export function AnimatedLanding() {
           scale: scaleTransform,
         }}
       >
-        <div className="w-2/5">
+        <div className="w-4/5 sm:w-3/5 md:w-2/5">
           <Image
-            src="/images/logo.png" //foto del logo
+            src="/images/logo.png"
             alt="logo"
             layout="responsive"
             width={300}
@@ -54,14 +54,14 @@ export function AnimatedLanding() {
         >
           <IntroImage //foto del aniversario
             img="/images/photo2.jpeg"
-            className="w-1/4  left-[1%] absolute "
+            className="w-2/5 sm:w-2/7 md:w-1/4  left-[1%] absolute -z-10 "
             animationProps={animationProps}
             imageClass="-rotate-2"
           />
 
           <IntroImage //foto de la campaña para  hijos de trabajadores
             img="/images/photo3.jpg"
-            className="w-2/5 absolute top-1/2 left-1/4"
+            className=" w-3/5 md:w-2/5 absolute top-1/2 left-1/4"
             animationProps={animationProps}
             imageClass="-rotate-2"
           />
@@ -73,7 +73,7 @@ export function AnimatedLanding() {
           />
           <IntroImage //foto con la torta
             img="/images/fotoafuera.jpg"
-            className="absolute w-1/5 bottom-[15%] right-[25%]"
+            className="absolute w-3/7 md:w-1/5 bottom-[15%] right-[25%]"
             animationProps={animationProps}
             imageClass="rotate-6"
           />
@@ -110,7 +110,7 @@ export function AnimatedLanding() {
 
           <IntroImage
             img="/images/photo5.png" //foto con los concursantes yo y mishell
-            className="absolute w-1/4 right-10 top-10"
+            className="absolute w-2/5 md:w-1/4 right-10 top-10"
             animationProps={animationProps}
             imageClass="rotate-0"
           />
