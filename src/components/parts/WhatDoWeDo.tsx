@@ -76,7 +76,8 @@ function WhatDoWeDo() {
               dirigidos a adolescentes. Cada adolescente al formar parte de
               ForeverYoung, contribuye al desarrollo del servicio
             </p>
-      <div className="sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-rows-4 w-full max-w-full gap-2 bg-darkBlue rounded-lg">
+      <div className="sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-rows-4 w-full max-w-full gap-2
+        rounded-lg">
         {/*TALLERES */}
 
         <InfoCard
