@@ -7,7 +7,7 @@ import AnimatedDiv from "@/components/minicomponents/AnimatedDiv";
 import NavBar from "@/components/sections/NavBar";
 export default function Home() {
   return (
-    <>
+    <div className="z-10">
       <AnimatedLanding />
       <NavBar/>
       <div className="bg-darkBlue">
@@ -24,19 +24,19 @@ export default function Home() {
           </div>
         </AnimatedDiv>
 
-        <AnimatedDiv className="bg-white border-2 border-black z-30">
-          <div className="max-w-screen-2xl p-8 m-auto space-y-16">
+        <AnimatedDiv className="bg-white  border-2 border-black z-30">
+          <div className="max-w-screen-2xl px-8 py-12 m-auto">
             <WhoAreWe />
           </div>
         </AnimatedDiv>
 
-        <AnimatedDiv className="bg-deepOrange border-2 border-black z-30">
-          <div className="max-w-screen-2xl p-8 m-auto space-y-16">
+        <AnimatedDiv className="bg-deepGreen border-2 border-black z-30">
+          <div className="max-w-screen-2xl px-8 py-12 m-auto">
             <JoinUs />
           </div>
         </AnimatedDiv>
 
       </div>
-    </>
+    </div>
   );
 }
