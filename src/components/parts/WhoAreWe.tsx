@@ -71,10 +71,10 @@ const participants = [
 
 function WhoAreWe() {
   return (
-    <div className="space-y-4">
+    <div className="space-y-6" id="whoarewe">
       <h1>¿QUIÉNES SOMOS?</h1>
 
-      <div className="grid grid-cols-4 md:lg-grid-cols-5 lg:grid-cols-6 gap-2 w-full">
+      <div className="grid text-white grid-cols-4 md:lg-grid-cols-5 lg:grid-cols-6 gap-2 lg:gap-2 w-full">
         {participants.map((participant, index) => {
           return (
             <div key={index}>
