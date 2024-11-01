@@ -4,10 +4,10 @@ import Link from "next/link";
 import { FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-function Footer() {
+function Footer({ className = '' }) {
   return (
     <motion.div
-      className="fixed bottom-0 left-0 w-full pt-32 text-white bg-darkBlue -z-30"
+      className={`w-full text-white bg-darkBlue -z-30 ${className}`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
