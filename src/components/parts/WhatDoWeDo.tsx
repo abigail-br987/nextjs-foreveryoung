@@ -6,7 +6,7 @@ interface HoverImageCardProps {
   backgroundImage: string;
 }
 
-const HoverImageCard: React.FC<HoverImageCardProps> = ({
+export const HoverImageCard: React.FC<HoverImageCardProps> = ({
   className = "",
   link,
   backgroundImage,
@@ -16,7 +16,7 @@ const HoverImageCard: React.FC<HoverImageCardProps> = ({
       className={`relative flex items-start border-2 border-darkBlue rounded-lg ${className}`}
     >
       <div
-        className="w-full h-full rounded-lg bg-cover bg-center cursor-pointer overflow-hidden transition-all relative"
+        className="w-full border-2 border-darkBlue  h-full rounded-lg bg-cover bg-center cursor-pointer overflow-hidden transition-all relative"
         onClick={() => window.open(link, "_blank")}
       >
         <div
@@ -37,7 +37,7 @@ interface InfoCardProps {
   className?: string;
 }
 
-const InfoCard: React.FC<InfoCardProps> = ({
+export const InfoCard: React.FC<InfoCardProps> = ({
   emoji,
   title,
   content,
@@ -76,7 +76,7 @@ function WhatDoWeDo() {
               dirigidos a adolescentes. Cada adolescente al formar parte de
               ForeverYoung, contribuye al desarrollo del servicio
             </p>
-      <div className="sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-rows-4 w-full max-w-full gap-2
+      <div className="sm:grid max-sm:space-y-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-rows-4 w-full max-w-full gap-2
         rounded-lg">
         {/*TALLERES */}
 
