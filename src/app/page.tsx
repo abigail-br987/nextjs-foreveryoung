@@ -4,12 +4,12 @@ import WhoAreWe from "@/components/parts/WhoAreWe";
 import JoinUs from "@/components/parts/JoinUs";
 import { AnimatedLanding } from "@/components/sections/AnimatedLanding";
 import AnimatedDiv from "@/components/minicomponents/AnimatedDiv";
-
+import NavBar from "@/components/sections/NavBar";
 export default function Home() {
   return (
     <>
       <AnimatedLanding />
-
+      <NavBar/>
       <div className="bg-darkBlue">
         <AnimatedDiv className="bg-deepGreen border-2 border-black z-30">
           <div className="max-w-screen-2xl p-8 m-auto space-y-16">
