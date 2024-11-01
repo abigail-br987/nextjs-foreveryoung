@@ -1,21 +1,31 @@
-"use client";
+"use client"; // Make sure to include this if you're using hooks or client components
+import { MouseEvent, useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
 const navItems = [
   { name: "Inicio", to: "/", style: "bg-gbGreen" },
-  { name: "Programas", to: "/programas", style: "bg-gbBlue" },
-  { name: "Nosotros", to: "/nosotros", style: "bg-gbRed" },
+  { name: "Nosotros", to: "#whoarewe", style: "bg-gbGreen" },
   { name: "Contacto", to: "/contacto", style: "bg-gbYellow" },
-  { name: "Blog", to: "/blog", style: "" },
 ];
 
 function NavBar() {
   const { scrollY } = useScroll();
+  const yPosition = useTransform(scrollY, [50, 550], [-100, 0]);
 
-  const yPosition = useTransform(scrollY, [50, 550], [-100, 0]); 
+  const handleScrollToSection = (e: MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => {
+    e.preventDefault();
+    const target = document.getElementById(targetId);
+    if (target) {
+      const offset = 90;
+      const elementPosition = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth', 
+      });
+    }
+  };
 
   return (
     <motion.nav
@@ -42,9 +52,14 @@ function NavBar() {
           </Link>
           <div className="max-sm:w-full flex items-center space-x-2 md:space-x-4 z-0 rounded-md px-3">
             {navItems.map((item, index) => (
-              <Link href={item.to} key={index} className="relative uppercase cursor-pointer text-gbWhite font-bold group">
+              <a 
+                href={item.to} 
+                key={index} 
+                className="relative uppercase cursor-pointer text-gbWhite font-bold group" 
+                onClick={(e) => handleScrollToSection(e, item.name === "Nosotros" ? "whoarewe" : item.to.replace("/", ""))}
+              >
                 {item.name}
-              </Link>
+              </a>
             ))}
           </div>
         </ul>
