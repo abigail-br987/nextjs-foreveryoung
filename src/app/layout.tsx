@@ -26,10 +26,9 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased overflow-x-hidden flex flex-col min-h-screen">
-        <main className="flex-grow">{children}</main>
-        <Footer className="opacity-0"/>
-        <Footer className="fixed bottom-0 left-0"/>
-      </body>
+  <main className="flex-grow z-50 relative">{children}</main> 
+  <Footer className="fixed bottom-0 left-0 w-full z-10" />
+</body>
     </html>
   );
 }
