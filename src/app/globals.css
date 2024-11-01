@@ -4,15 +4,15 @@
 
 @layer base {
   h1 {
-    @apply uppercase text-2xl leading-3 font-extrabold text-center font-serif text-white;
+    @apply uppercase text-5xl leading-10 font-extrabold text-center font-serif text-white;
     text-shadow:
-      -1.5px -1.5px 0 #000,  
-      1.5px -1.5px 0 #000,
-      -1.5px 1.5px 0 #000,
-      1.3px 1.3px 0 #000;
+      -2px -2px 0 #000,  
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+      2px 2px 0 #000;
   }
   h2 {
-    @apply font-medium font-mono;
+    @apply font-medium font-mono uppercase leading-4;
   }
   h3 {
     @apply font-semibold text-lg font-sans; 
@@ -21,7 +21,7 @@
     @apply font-sans text-lg leading-6 my-2; 
   }
   html {
-    @apply text-[#0b1734];
+    @apply text-[#0b1734] scroll-smooth;
   }
 }
 
