@@ -9,7 +9,6 @@ export default function Home() {
   return (
     <div className="z-10">
       <AnimatedLanding />
-      <NavBar animated/>
       <div className="bg-darkBlue">
         <AnimatedDiv className="bg-deepGreen border-2 border-black z-30">
           <div className="max-w-screen-2xl p-8 m-auto space-y-16">
@@ -24,11 +23,7 @@ export default function Home() {
           </div>
         </AnimatedDiv>
 
-        <AnimatedDiv className="bg-white  border-2 border-black z-30">
-          <div className="max-w-screen-2xl px-8 py-12 m-auto">
-            <WhoAreWe />
-          </div>
-        </AnimatedDiv>
+
 
         <AnimatedDiv className="bg-deepGreen border-2 border-black z-30">
           <div className="max-w-screen-2xl px-8 py-12 m-auto">
