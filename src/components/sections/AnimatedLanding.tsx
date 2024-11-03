@@ -11,7 +11,7 @@ export function AnimatedLanding() {
   const yTransform2 = useTransform(scrollY, [0, 1300], [0, 650]);
   const yTransform3 = useTransform(scrollY, [0, 1300], [0, 350]);
   const yTransform4 = useTransform(scrollY, [0, 1300], [0, 550]);
-  const yTransform5 = useTransform(scrollY, [0, 600, 1300], [0, -100, -450]);
+  // const yTransform5 = useTransform(scrollY, [0, 600, 1300], [0, -100, -450]);
 
   const scaleTransform = useTransform(scrollY, [0, 1500], [1, 0.9]);
 
