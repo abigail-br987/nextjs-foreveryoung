@@ -1,6 +1,3 @@
-import { useState } from "react";
-import { HoverImageCard } from "./WhatDoWeDo";
-import { InfoCard } from "./WhatDoWeDo";
 const joinus = [
   {
     title: "🤝 Como Alianza",
