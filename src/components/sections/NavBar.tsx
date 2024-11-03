@@ -10,23 +10,27 @@ interface NavBarProps {
 
 const navItems = [
   { name: "Inicio", to: "/" },
-  { name: "Nosotros", to: "#whoarewe" },
+  { name: "Nosotros", to: "/nosotros" },
   { name: "Contacto", to: "/contacto" },
 ];
 
 function NavBar({ animated = false }: NavBarProps) {
   const { scrollY } = useScroll();
-  const yPosition = animated ? useTransform(scrollY, [50, 550], [-100, 0]) : 0;
+  const yPosition = animated ? useTransform(scrollY, [0, 250], [-100, 0]) : 0;
 
-  const handleScrollToSection = (e: MouseEvent<HTMLAnchorElement>, targetId: string) => {
+  const handleScrollToSection = (
+    e: MouseEvent<HTMLAnchorElement>,
+    targetId: string
+  ) => {
     e.preventDefault();
     const target = document.getElementById(targetId);
     if (target) {
       const offset = 90;
-      const elementPosition = target.getBoundingClientRect().top + window.scrollY - offset;
+      const elementPosition =
+        target.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({
         top: elementPosition,
-        behavior: 'smooth',
+        behavior: "smooth",
       });
     }
   };
@@ -50,14 +54,17 @@ function NavBar({ animated = false }: NavBarProps) {
         <div className="max-sm:w-full flex items-center space-x-2 md:space-x-4 z-0 rounded-md px-3">
           {navItems.map((item, index) => {
             const isInternalSection = item.to.startsWith("#");
-            const targetId = item.name === "Nosotros" ? "whoarewe" : item.to.replace("/", "");
-            
+            const targetId =
+              item.name === "Nosotros" ? "whoarewe" : item.to.replace("/", "");
+
             return (
               <Link
                 href={isInternalSection ? "/" : item.to}
                 key={index}
                 className="relative uppercase cursor-pointer text-gbWhite font-bold group"
-                onClick={(e) => isInternalSection && handleScrollToSection(e, targetId)}
+                onClick={(e) =>
+                  isInternalSection && handleScrollToSection(e, targetId)
+                }
               >
                 {item.name}
                 {animated && (
@@ -71,18 +78,18 @@ function NavBar({ animated = false }: NavBarProps) {
     </div>
   );
 
-  return animated ? (
-    <motion.nav
-      className="max-sm:text-sm fixed w-full top-0 z-50 font-serif bg-white border-2 border-darkBlue"
-      style={{ y: yPosition }}
-      transition={{ type: "spring", stiffness: 100 }}
-    >
-      {NavContent}
-    </motion.nav>
-  ) : (
-    <nav className="max-sm:text-sm fixed w-full top-0 z-50 font-serif bg-white border-2 border-darkBlue">
-      {NavContent}
-    </nav>
+  return (
+    <>
+    
+      <nav className="max-sm:text-sm fixed w-full top-0 z-50 font-serif bg-white border-2 border-darkBlue">
+        {NavContent}
+      </nav>
+
+      <nav className="max-sm:text-sm w-full top-0 z-50 font-serif bg-white border-2 border-darkBlue">
+        {NavContent}
+      </nav>
+
+    </>
   );
 }
 
