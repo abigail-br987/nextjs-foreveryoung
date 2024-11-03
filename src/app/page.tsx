@@ -1,10 +1,8 @@
 "use client";
 import WhatDoWeDo from "@/components/parts/WhatDoWeDo";
-import WhoAreWe from "@/components/parts/WhoAreWe";
 import JoinUs from "@/components/parts/JoinUs";
 import { AnimatedLanding } from "@/components/sections/AnimatedLanding";
 import AnimatedDiv from "@/components/minicomponents/AnimatedDiv";
-import NavBar from "@/components/sections/NavBar";
 export default function Home() {
   return (
     <div className="z-10">
