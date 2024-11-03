@@ -42,11 +42,8 @@ const Contact: React.FC = () => {
       <h1>Contáctanos</h1>
 
       <div className="max-sm:flex-col flex bg-white rounded-lg border-2 border-darkBlue ">
-        <motion.div
-          className="space-y-3 bg-darkBlue translate-x-32 transform  text-white p-8 md:w-max"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
+        <div
+          className="space-y-3 bg-darkBlue  text-white p-8 md:w-max"
         >
             <h2>¡Queremos Conocerte!</h2>
           <header className="flex flex-col h-full">
@@ -79,13 +76,10 @@ const Contact: React.FC = () => {
               />
             </div>
           </header>
-        </motion.div>
-        <motion.form
+        </div>
+        <form
           onSubmit={handleSubmit}
           className=" text-darkBlue p-8 rounded-lg "
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
         >
           <p>Sientete libre de hacer preguntas o hacer un comentario</p>
           <div className="py-3 flex flex-col">
@@ -117,7 +111,7 @@ const Contact: React.FC = () => {
               id="message"
               placeholder="Mensaje"
               name="message"
-              className="p-2 w-full h-full min-h-32 border bg-gray-100 border-gray-300 rounded resize-none"
+              className="p-2 w-full h-full min-h-16 border bg-gray-100 border-gray-300 rounded resize-none"
               value={formData.message}
               onChange={handleChange}
               required
@@ -128,7 +122,7 @@ const Contact: React.FC = () => {
               Send Message
             </button>
           </div>
-        </motion.form>
+        </form>
       </div>
       {status && (
         <motion.p
