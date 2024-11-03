@@ -1,9 +1,11 @@
-import { motion } from "framer-motion";
+import { motion, MotionProps } from "framer-motion";
 import Image from "next/image";
+import React from "react";
+
 interface IntroImageProps {
   img: string;
   className?: string;
-  animationProps?: any;
+  animationProps?: MotionProps;
   imageClass: string;
 }
 
@@ -19,7 +21,7 @@ export const IntroImage: React.FC<IntroImageProps> = ({
       {...animationProps}
     >
       <div
-        className={`border-2 rounded-xl  bg-darkBlue border-darkBlue ${imageClass}`}
+        className={`border-2 rounded-xl bg-darkBlue border-darkBlue ${imageClass}`}
       >
         <Image
           src={img}
