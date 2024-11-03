@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css"; 
+import NavBar from "@/components/sections/NavBar";
 import Footer from "@/components/sections/Footer";
 export const metadata: Metadata = {
   title: "ForeverYoung Voluntariado",
@@ -26,7 +27,12 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased overflow-x-hidden flex flex-col min-h-screen">
-  <main className="flex-grow z-50 relative">{children}</main> 
+  <main className="flex-grow z-50 relative">
+    <> 
+    
+    <NavBar/>
+    
+  {children}  </></main> 
   <Footer className="w-full z-10" />
 
   <Footer className="fixed bottom-0 left-0 w-full z-10" />
