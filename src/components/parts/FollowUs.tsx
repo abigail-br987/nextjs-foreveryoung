@@ -1,4 +1,3 @@
-import Section from "../minicomponents/Section"
 import { BsInstagram } from "react-icons/bs"
 
 function FollowUs() { 
