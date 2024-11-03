@@ -4,7 +4,6 @@ import axios from "axios";
 import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { motion } from "framer-motion";
-import { FaPhoneAlt } from "react-icons/fa";
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
