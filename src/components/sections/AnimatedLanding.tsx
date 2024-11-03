@@ -16,10 +16,10 @@ export function AnimatedLanding() {
   const scaleTransform = useTransform(scrollY, [0, 1500], [1, 0.9]);
 
   const animationProps = {
-    initial: { opacity: 0, scale: 0.5 },
+    initial: { opacity: 0 },
     animate: { opacity: 1, scale: 1 },
     exit: { opacity: 0, scale: 0.5 },
-    transition: { duration: 0.8, ease: "easeInOut" },
+    transition: { duration: 0.3, ease: "easeInOut" },
   };
 
   return (
@@ -153,9 +153,7 @@ export function AnimatedLanding() {
         </motion.div>
       </div>
       
-      
-      
-
+  
     </div>
 
     </>
