@@ -1,6 +1,6 @@
 "use client";
 import { MouseEvent } from "react";
-import { useScroll, useTransform, motion } from "framer-motion";
+import { useScroll } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -16,7 +16,6 @@ const navItems = [
 
 function NavBar({ animated = false }: NavBarProps) {
   const { scrollY } = useScroll();
-  const yPosition = animated ? useTransform(scrollY, [0, 250], [-100, 0]) : 0;
 
   const handleScrollToSection = (
     e: MouseEvent<HTMLAnchorElement>,
