@@ -24,7 +24,7 @@ export function AnimatedLanding() {
 
   return (
     <> 
-    <div className="w-full h-[150vh] relative overflow-hidden -z-20 bg-white">
+    <div className="w-full h-[150vh] -mt-14 relative overflow-hidden -z-20 bg-white">
       <motion.div
         className="fixed top-0 left-0 w-full h-full  flex items-center justify-center -z-10"
         style={{
