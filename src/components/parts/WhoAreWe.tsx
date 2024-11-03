@@ -11,7 +11,7 @@ const participants = [
     name: "Abigail Briones",
     title: "Presidenta",
     description: "",
-    imageSrc: "/images/abigailbriones.jpg",
+    imageSrc: "/images/abigailbriones.png",
   },
   {
     name: "Leonardo",
@@ -73,6 +73,20 @@ function WhoAreWe() {
   return (
     <div className="space-y-6" id="whoarewe">
       <h1>¿QUIÉNES SOMOS?</h1>
+      <p>
+        ForeverYoung es un voluntariado comprometido con el empoderamiento de
+        los adolescentes a través de la educación y la concienciación sobre
+        salud y derechos. Nuestro equipo está formado por jóvenes apasionados
+        que trabajan juntos para crear un espacio seguro donde se fomente la
+        comunicación abierta y el aprendizaje activo. Nos enfocamos en abordar
+        temas cruciales como la salud sexual y reproductiva, el bienestar
+        emocional y los derechos de los adolescentes, proporcionando información
+        accesible y confiable. A través de talleres, actividades interactivas y
+        programas de sensibilización, buscamos inspirar a los jóvenes a tomar
+        decisiones informadas que impacten positivamente en sus vidas y en su
+        entorno. Nuestro objetivo es construir una comunidad donde el respeto,
+        la comprensión y la tolerancia sean fundamentales.
+      </p>
 
       <div className="grid text-white grid-cols-4 md:lg-grid-cols-5 lg:grid-cols-6 gap-2 lg:gap-2 w-full">
         {participants.map((participant, index) => {
@@ -81,7 +95,6 @@ function WhoAreWe() {
               <PersonCard
                 name={participant.name}
                 title={participant.title}
-                description={participant.description}
                 imageSrc={participant.imageSrc}
               />
             </div>
