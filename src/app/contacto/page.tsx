@@ -1,4 +1,3 @@
-import NavBar from "@/components/sections/NavBar";
 import Contact from "@/components/sections/ContactForm";
 
 const Contacto = () => {
