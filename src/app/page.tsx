@@ -11,11 +11,12 @@ export default function Home() {
       <div className="bg-white">
 
       <div className="bg-white border-2 border-b-0 relative border-black">
-              <p className="max-w-screen-2xl p-8 py-8 m-auto text-2xl text-center">
+              <AnimatedDiv className="max-w-screen-2xl p-8 py-8 m-auto text-2xl text-center">
+                <p className="text-2xl"> 
                 Somos la <strong>organización de voluntariado</strong> del
                 Servicio de Medicina del Adolescente del Hospital del Niño de
-                Breña, Lima, Perú.
-              </p>
+                Breña, Lima, Perú.</p>
+              </AnimatedDiv>
 
               <StarIcon className="-bottom-5 left-10 z-10 absolute text-deepOrange"/>
         </div>
