@@ -18,7 +18,7 @@
     @apply font-semibold text-lg font-sans; 
   }
   p {
-    @apply font-sans text-lg leading-6 my-2; 
+    @apply font-sans text-lg leading-6 mt-2; 
   }
   html {
     @apply text-[#0b1734] scroll-smooth;
