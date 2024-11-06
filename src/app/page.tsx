@@ -10,7 +10,7 @@ export default function Home() {
       <AnimatedLanding />
       <div className="bg-white">
 
-      <div className="bg-white border-2 relative border-black">
+      <div className="bg-white border-2 border-b-0 relative border-black">
               <p className="max-w-screen-2xl p-8 py-8 m-auto text-2xl text-center">
                 Somos la <strong>organización de voluntariado</strong> del
                 Servicio de Medicina del Adolescente del Hospital del Niño de
@@ -21,7 +21,7 @@ export default function Home() {
         </div>
 
 
-        <div className="border-2 border-black relative">
+        <div className="border-2 border-black border-b-0 relative">
         <AnimatedDiv className="max-w-screen-2xl px-8 py-20 m-auto">
             <WhatDoWeDo />
           </AnimatedDiv>
