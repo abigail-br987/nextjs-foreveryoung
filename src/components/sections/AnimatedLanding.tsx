@@ -157,7 +157,7 @@ export function AnimatedLanding() {
   
     </div>
  
-    <div className="sm:hidden m-auto w-4/5 sm:w-3/5 md:w-2/5">
+    <div className="sm:hidden py-4 m-auto w-4/5 sm:w-3/5 md:w-2/5">
           <Image
             src="/images/logo.png"
             alt="logo"
