@@ -65,7 +65,7 @@ const participants = [
     name: "Ana Lucía",
     title: "Miembro",
     description: "",
-    imageSrc: "/images/.png",
+    imageSrc: "/images/analucia.jpg",
   },
 ];
 
