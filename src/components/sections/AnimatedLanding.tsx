@@ -24,7 +24,7 @@ export function AnimatedLanding() {
 
   return (
     <> 
-    <div className="w-full h-[150vh] -mt-14 relative overflow-hidden -z-20 bg-white">
+    <div className="max-sm:hidden w-full h-[150vh] -mt-14 relative overflow-hidden -z-20 bg-white">
 
       <motion.div
         className="absolute top-[22%] w-full"
@@ -156,6 +156,17 @@ export function AnimatedLanding() {
       
   
     </div>
+ 
+    <div className="sm:hidden m-auto w-4/5 sm:w-3/5 md:w-2/5">
+          <Image
+            src="/images/logo.png"
+            alt="logo"
+            layout="responsive"
+            width={300}
+            height={300}
+            className="object-contain rounded-lg"
+          />
+        </div>
 
     </>
   );
