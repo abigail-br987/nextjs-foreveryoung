@@ -34,7 +34,7 @@ function Footer({ className = "" }) {
               <FaWhatsapp className="text-white text-4xl hover:text-gray-400 z-10" />
             </Link>
           </div>
-          <h3>FOREVERYOUNG VOLUNTARIADO</h3>
+          <h3 className="font-serif">FOREVERYOUNG VOLUNTARIADO</h3>
         </div>
 
         <div className="text-right max-sm:hidden space-y-5">
