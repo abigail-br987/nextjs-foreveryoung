@@ -4,7 +4,7 @@
 
 @layer base {
   h1 {
-    @apply uppercase text-5xl text-deepGreen leading-10 font-extrabold text-center font-serif;
+    @apply uppercase sm:text-5xl text-xl text-deepGreen leading-10 font-extrabold text-center font-serif;
     text-shadow:
       -1.5px -1.5px 0 #000,  
       1.5px -1.5px 0 #000,
