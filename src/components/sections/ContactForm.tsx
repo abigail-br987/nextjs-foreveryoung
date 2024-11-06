@@ -60,19 +60,13 @@ const Contact: React.FC = () => {
 
             <div
               className="flex-grow rounded-lg
-               bg-cover bg-center cursor-pointer
+               bg-cover bg-center 
                 overflow-hidden transition-all
                 max-sm:h-52
                 relative my-4 sm:mb-6"
-              onClick={() =>
-                window.open(
-                  "https://www.instagram.com/forever_young_voluntariado/",
-                  "_blank"
-                )
-              }
             >
               <div
-                className="absolute inset-0 bg-cover bg-center transition-transform hover:rotate-1 duration-300 ease-in-out hover:scale-110"
+                className="absolute inset-0 bg-cover bg-center"
                 style={{
                   backgroundImage: `url("/images/photo2.jpeg")`,
                 }}
