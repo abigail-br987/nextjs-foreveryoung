@@ -9,7 +9,7 @@ interface AnimatedDivProps {
 
 const AnimatedDiv = ({ children, className = "" }: AnimatedDivProps) => {
   const ref = useRef<HTMLDivElement | null>(null);
-  const isInView = useInView(ref, { once: false, margin: "-15% 0px" });
+  const isInView = useInView(ref, { once: false, margin: "-10% 0px" });
 
   return (
     <motion.div
