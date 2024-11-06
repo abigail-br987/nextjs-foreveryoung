@@ -1,6 +1,5 @@
 "use client";
 import { MouseEvent } from "react";
-import { useScroll } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
