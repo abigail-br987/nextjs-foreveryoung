@@ -38,7 +38,7 @@ const Contact: React.FC = () => {
 
   return (
     <section className="space-y-3 mt-20 mb-10">
-      <h1>Contáctanos</h1>
+      <h1 className="text-white">Contáctanos</h1>
 
       <div className="max-sm:flex-col flex bg-white rounded-lg border-2 border-darkBlue ">
         <div
