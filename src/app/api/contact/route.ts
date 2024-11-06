@@ -12,7 +12,7 @@ export async function POST(req: Request) {
     },
   });
 
-  const mailOptions = {
+  const mailOptions  = {
     from: `"${name}" <${email}>`,
     to: process.env.EMAIL_RECEIVER,
     subject: 'New Contact Form Submission',
