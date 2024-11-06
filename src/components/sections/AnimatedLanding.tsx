@@ -7,7 +7,7 @@ import { IntroImage } from "../frames/IntroImage";
 export function AnimatedLanding() {
   const { scrollY } = useViewportScroll();
 
-  const yTransform1 = useTransform(scrollY, [0, 1300], [0, -850]);
+  const yTransform1 = useTransform(scrollY, [0, 1300], [0, 850]);
   const yTransform2 = useTransform(scrollY, [0, 1300], [0, 650]);
   const yTransform3 = useTransform(scrollY, [0, 1300], [0, 350]);
   const yTransform4 = useTransform(scrollY, [0, 1300], [0, 550]);
@@ -25,14 +25,15 @@ export function AnimatedLanding() {
   return (
     <> 
     <div className="w-full h-[150vh] -mt-14 relative overflow-hidden -z-20 bg-white">
+
       <motion.div
-        className="fixed top-0 left-0 w-full h-full  flex items-center justify-center -z-10"
+        className="absolute top-[22%] w-full"
         style={{
           y: yTransform1,
           scale: scaleTransform,
         }}
       >
-        <div className="w-4/5 sm:w-3/5 md:w-2/5">
+        <div className=" m-auto w-4/5 sm:w-3/5 md:w-2/5">
           <Image
             src="/images/logo.png"
             alt="logo"
