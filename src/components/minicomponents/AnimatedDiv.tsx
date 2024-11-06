@@ -9,15 +9,15 @@ interface AnimatedDivProps {
 
 const AnimatedDiv = ({ children, className = "" }: AnimatedDivProps) => {
   const ref = useRef<HTMLDivElement | null>(null);
-  const isInView = useInView(ref, { once: false, margin: "-40% 0px" });
+  const isInView = useInView(ref, { once: false, margin: "-15% 0px" });
 
   return (
     <motion.div
       ref={ref}
-      initial={{ scale: 0.97, opacity:0.9 }}
+      initial={{ scale: 0.97, opacity:0.7 }}
       animate={{ 
         scale: isInView ? 1 : 0.97, 
-        opacity: isInView? 1: 0.9,
+        opacity: isInView? 1: 0.7,
       }}
       transition={{ 
         duration: 0.5,
