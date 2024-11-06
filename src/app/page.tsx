@@ -1,33 +1,41 @@
 "use client";
 import WhatDoWeDo from "@/components/parts/WhatDoWeDo";
 import JoinUs from "@/components/parts/JoinUs";
+import { StarIcon } from "@/components/figures/StarIcon";
 import { AnimatedLanding } from "@/components/sections/AnimatedLanding";
 import AnimatedDiv from "@/components/minicomponents/AnimatedDiv";
 export default function Home() {
   return (
     <div className="z-10">
       <AnimatedLanding />
-      <div className="bg-darkBlue">
-        <AnimatedDiv className="bg-deepGreen border-2 border-black z-30">
-          <div className="max-w-screen-2xl p-8 m-auto space-y-16">
-            <div className="text-center">
-              <p className="text-2xl">
+      <div className="bg-white">
+
+      <div className="bg-white border-2 relative border-black">
+              <p className="max-w-screen-2xl p-8 py-8 m-auto text-2xl text-center">
                 Somos la <strong>organización de voluntariado</strong> del
                 Servicio de Medicina del Adolescente del Hospital del Niño de
                 Breña, Lima, Perú.
               </p>
-            </div>
+
+              <StarIcon className="-bottom-5 left-10 z-10 absolute text-deepOrange"/>
+        </div>
+
+
+        <div className="border-2 border-black relative">
+        <AnimatedDiv className="max-w-screen-2xl px-8 py-20 m-auto">
             <WhatDoWeDo />
-          </div>
-        </AnimatedDiv>
+          </AnimatedDiv>
 
+          <StarIcon className="-bottom-5 right-8 absolute text-deepGreen"/>
 
+        </div>
 
-        <AnimatedDiv className="bg-deepGreen border-2 border-black z-30">
-          <div className="max-w-screen-2xl px-8 py-12 m-auto">
+        <div className="border-2 border-black">
+          <AnimatedDiv className="max-w-screen-2xl px-8 py-20 m-auto">
             <JoinUs />
-          </div>
-        </AnimatedDiv>
+          </AnimatedDiv>
+        </div>
+
 
       </div>
     </div>
