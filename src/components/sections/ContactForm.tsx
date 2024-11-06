@@ -59,7 +59,11 @@ const Contact: React.FC = () => {
             </div>
 
             <div
-              className="flex-grow rounded-lg bg-cover bg-center cursor-pointer overflow-hidden transition-all relative mt-4 mb-6"
+              className="flex-grow rounded-lg
+               bg-cover bg-center cursor-pointer
+                overflow-hidden transition-all
+                max-sm:h-52
+                relative my-4 sm:mb-6"
               onClick={() =>
                 window.open(
                   "https://www.instagram.com/forever_young_voluntariado/",
