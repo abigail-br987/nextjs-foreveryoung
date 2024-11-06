@@ -66,7 +66,7 @@ export function AnimatedLanding() {
             imageClass="-rotate-2"
           />
           <IntroImage //foto con la torta
-            img="/images/photo16.jfif"
+            img="/images/photo16.png"
             className="absolute w-1/6 right-[3%] top-[26%]"
             animationProps={animationProps}
             imageClass="rotate-6"
