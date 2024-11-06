@@ -119,7 +119,7 @@ function WhatDoWeDo() {
         <HoverImageCard
           className="max-md:hidden lg:col-span-2 row-start-2"
           link="https://www.instagram.com/forever_young_voluntariado/"
-          backgroundImage="/images/screenshot1.png"
+          backgroundImage="/images/screenshot1.jpg"
         />
 
         {/* PROYECTOS */}
