@@ -5,7 +5,8 @@ function JoinUs() {
       <div className="grid md:grid-cols-2 gap-2 justify-center">
 
         <div className="w-full space-y-2 rounded-lg">
-          <div className="p-6 text-darkBlue bg-white border-2 rounded-lg border-darkBlue shadow-sm shadow-darkBlue">
+          <div className="p-6 text-darkBlue bg-white
+           border-2 rounded-lg border-darkBlue ">
             <h2 className="mt-2">Como Miembro</h2>
             <p>Sé parte activa de nuestras iniciativas. Para participar, debes pasar por Servicio de Medicina del Adolescente y preguntar a la Lic. Katty Rojas de Consejería de Salud Sexual y Reproductiva sobre la posibilidad de unirse.</p>
           </div>
@@ -35,7 +36,8 @@ function JoinUs() {
               />
             </div>
           </div>
-          <div className="p-6 text-darkBlue bg-white border-2 rounded-lg border-darkBlue shadow-sm shadow-darkBlue">
+          <div className="p-6 text-darkBlue bg-white border-2 rounded-lg border-darkBlue
+          ">
             <h2 className="mt-2">Como Alianza</h2>
             <p>Si eres una empresa u organización interesada en colaborar, contáctanos para explorar posibles alianzas y proyectos conjuntos. Estamos abiertos a trabajar en equipo. Correo: @abigailbrionesaranda@gmail.com</p>
           </div>
