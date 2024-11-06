@@ -59,7 +59,7 @@ const participants = [
     name: "Ruby",
     title: "Miembro",
     description: "",
-    imageSrc: "/images/participantes-11.png",
+    imageSrc: "/images/participantes-11.jpg",
   },
   {
     name: "Ana Lucía",
