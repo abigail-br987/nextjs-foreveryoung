@@ -16,7 +16,7 @@ export const HoverImageCard: React.FC<HoverImageCardProps> = ({
       className={`relative flex items-start border-2 border-darkBlue rounded-lg ${className}`}
     >
       <div
-        className="w-full border-2 border-darkBlue  h-full rounded-lg bg-cover bg-center cursor-pointer overflow-hidden transition-all relative"
+        className="w-full   h-full rounded-lg bg-cover bg-center cursor-pointer overflow-hidden transition-all relative"
         onClick={() => window.open(link, "_blank")}
       >
         <div
@@ -47,10 +47,12 @@ export const InfoCard: React.FC<InfoCardProps> = ({
     <div
       className={`p-5 relative rounded-lg border-2 border-darkBlue bg-white flex flex-col ${className}`}
     >
-      <div className="absolute -top-3 -left-3 flex
+      <div className="absolute -bottom-3 -right-3 flex
        items-center justify-center bg-white text-2xl border-2 aspect-square border-darkBlue rounded-full">
         {emoji}
       </div>
+
+
       <h2>{title}</h2>
       <p>{content}</p>
     </div>
@@ -60,8 +62,9 @@ export const InfoCard: React.FC<InfoCardProps> = ({
 function WhatDoWeDo() {
   return (
     <div className="space-y-4">
-      <h1>¿Qué hacemos?</h1>
-      <p className="text-center bg-white leading-4 w-fit p-1 px-3 rounded-lg pt-1.5 m-auto border-2 border-darkBlue">
+      <h1 className="text-deepGreen">¿Qué hacemos?</h1>
+      <p className="text-center 
+       leading-4 w-fit p-1 px-3 rounded-lg pt-1.5 m-auto border-2 border-darkBlue">
         Nuestro objetivo es apoyar a los adolescentes y promover su salud
         sexual, integral, mental y física.
       </p>
@@ -76,7 +79,7 @@ function WhatDoWeDo() {
               dirigidos a adolescentes. Cada adolescente al formar parte de
               ForeverYoung, contribuye al desarrollo del servicio
             </p>
-      <div className="sm:grid max-sm:space-y-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-rows-4 w-full max-w-full gap-2
+      <div className="sm:grid  max-sm:space-y-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-rows-4 w-full max-w-full gap-2
         rounded-lg">
         {/*TALLERES */}
 
