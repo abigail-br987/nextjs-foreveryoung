@@ -88,7 +88,7 @@ function WhoAreWe() {
         la comprensión y la tolerancia sean fundamentales.
       </p>
 
-      <div className="grid text-white grid-cols-4 md:lg-grid-cols-5 lg:grid-cols-6 gap-2 lg:gap-2 w-full">
+      <div className="grid text-white grid-cols-2 sm:grid-cols-3 md:lg-grid-cols-5 lg:grid-cols-6 gap-2 lg:gap-2 w-full">
         {participants.map((participant, index) => {
           return (
             <div key={index}>
