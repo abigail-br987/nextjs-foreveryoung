@@ -15,7 +15,6 @@ const navItems = [
 ];
 
 function NavBar({ animated = false }: NavBarProps) {
-  const { scrollY } = useScroll();
 
   const handleScrollToSection = (
     e: MouseEvent<HTMLAnchorElement>,
