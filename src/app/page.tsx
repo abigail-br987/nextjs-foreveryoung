@@ -23,7 +23,7 @@ export default function Home() {
 
 
         <div className="border-2 border-black border-b-0 relative">
-        <AnimatedDiv className="max-w-screen-2xl px-8 py-20 m-auto">
+        <AnimatedDiv className="max-w-screen-2xl px-8 py-10 sm:py-20 m-auto">
             <WhatDoWeDo />
           </AnimatedDiv>
 
@@ -32,7 +32,7 @@ export default function Home() {
         </div>
 
         <div className="border-2 border-black">
-          <AnimatedDiv className="max-w-screen-2xl px-8 py-20 m-auto">
+          <AnimatedDiv className="max-w-screen-2xl px-8 py-10 sm:py-20 m-auto">
             <JoinUs />
           </AnimatedDiv>
         </div>
