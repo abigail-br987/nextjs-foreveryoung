@@ -4,6 +4,7 @@ import axios from "axios";
 import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { motion } from "framer-motion";
+import AnimatedDiv from "../minicomponents/AnimatedDiv";
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -37,7 +38,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section className="space-y-3 mt-20 mb-10">
+    <AnimatedDiv className="space-y-3 mt-20 mb-10">
       <h1 className="text-white">Contáctanos</h1>
 
       <div className="max-sm:flex-col flex bg-white rounded-lg border-2 border-darkBlue ">
@@ -131,7 +132,7 @@ const Contact: React.FC = () => {
           {status}
         </motion.p>
       )}
-    </section>
+    </AnimatedDiv>
   );
 };
 
