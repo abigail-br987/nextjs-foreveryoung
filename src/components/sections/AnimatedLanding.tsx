@@ -66,7 +66,7 @@ export function AnimatedLanding() {
             imageClass="rotate-3"
           />
           <IntroImage //foto de la campaña para  hijos de trabajadores
-            img="/images/photo3.jpg"
+            img="/images/compartir.jpg"
             className=" w-3/5 md:w-2/5 absolute top-1/2 left-1/4"
             animationProps={animationProps}
             imageClass="-rotate-2"
