@@ -7,9 +7,9 @@ import { IntroImage } from "../frames/IntroImage";
 export function AnimatedLanding() {
   const { scrollY } = useViewportScroll();
 
-  const yTransform1 = useTransform(scrollY, [0, 1300], [0, 850]);
-  const yTransform2 = useTransform(scrollY, [0, 1300], [0, 650]);
-  const yTransform3 = useTransform(scrollY, [0, 1300], [0, 350]);
+  const yTransform1 = useTransform(scrollY, [0, 1300], [0, 1050]);
+  const yTransform2 = useTransform(scrollY, [0, 1300], [0, 950]);
+  const yTransform3 = useTransform(scrollY, [0, 1300], [0, 750]);
   const yTransform4 = useTransform(scrollY, [0, 1300], [0, 550]);
   // const yTransform5 = useTransform(scrollY, [0, 600, 1300], [0, -100, -450]);
 
@@ -24,7 +24,7 @@ export function AnimatedLanding() {
 
   return (
     <> 
-    <div className="max-2xl:hidden w-full h-[150vh] -mt-14 relative overflow-hidden -z-20 bg-white">
+    <div className="max-xl:hidden w-full h-[140vh] -mt-14 relative overflow-hidden -z-20 bg-white">
 
       <motion.div
         className="absolute top-[22%] w-full"
@@ -59,7 +59,12 @@ export function AnimatedLanding() {
             animationProps={animationProps}
             imageClass="-rotate-2"
           />
-
+    <IntroImage //foto con la ruleta
+            img="/images/photo17.jpg"
+            className="absolute w-1/7 top-[-1%] left-[32%]"
+            animationProps={animationProps}
+            imageClass="rotate-3"
+          />
           <IntroImage //foto de la campaña para  hijos de trabajadores
             img="/images/photo3.jpg"
             className=" w-3/5 md:w-2/5 absolute top-1/2 left-1/4"
@@ -72,12 +77,7 @@ export function AnimatedLanding() {
             animationProps={animationProps}
             imageClass="rotate-6"
           />
-          <IntroImage //foto con la torta
-            img="/images/fotoafuera.jpg"
-            className="absolute w-3/7 md:w-1/5 bottom-[15%] right-[25%]"
-            animationProps={animationProps}
-            imageClass="rotate-6"
-          />
+        
           <StarIcon className="absolute text-deepOrange right-1/3 top-20" />
           <StarIcon className="absolute text-deepGreen left-1/3 " />
           <StarIcon className="absolute text-deepGreen left-[24%] top-[38%]" />
@@ -102,13 +102,7 @@ export function AnimatedLanding() {
             imageClass="rotate-3"
           />
 
-          <IntroImage //foto con la ruleta
-            img="/images/photo17.jpg"
-            className="absolute w-1/7 top-[-1%] left-[32%]"
-            animationProps={animationProps}
-            imageClass="rotate-3"
-          />
-
+      
           <IntroImage
             img="/images/photo5.png" //foto con los concursantes yo y mishell
             className="absolute w-2/5 md:w-1/4 right-10 top-10"
@@ -147,7 +141,12 @@ export function AnimatedLanding() {
             animationProps={animationProps}
             imageClass="-rotate-2"
           />
-
+  <IntroImage //foto con el jefe
+            img="/images/fotoafuera.jpg"
+            className="absolute w-3/7 md:w-1/5 bottom-[15%] right-[25%]"
+            animationProps={animationProps}
+            imageClass="rotate-6"
+          />
           <StarIcon className="absolute text-darkBlue left-[29%] top-[6%]" />
           <StarIcon className="absolute text-deepGreen bottom-[30%] left-[30%] " />
           <StarIcon className="absolute text-darkBlue bottom-[15%] right-[46%]" />
